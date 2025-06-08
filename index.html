@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WD64F44L');</script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ByteGenics - Next-Gen Phones</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         /* Custom CSS for animations and font */
@@ -74,17 +70,11 @@
     </style>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-gray-900 to-black text-gray-100 font-inter">
-    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD64F44L"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <!-- Cart Message Display -->
     <div id="cart-message" class="hidden fixed top-4 left-1/2 -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg z-50 animate-bounce">
-        <!-- Message will be inserted here by JavaScript -->
-    </div>
+        </div>
 
-    <!-- Header -->
     <header class="py-6 px-4 md:px-8 border-b border-gray-700 backdrop-blur-md bg-opacity-30 sticky top-0 z-40">
         <div class="container mx-auto flex justify-between items-center">
             <h1 id="brand-logo" class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:scale-105 transition-transform duration-300 cursor-pointer">
@@ -103,16 +93,13 @@
                 <button id="nav-cart" class="relative text-gray-300 hover:text-blue-400 transition-colors duration-200">
                     Cart (<span id="cart-count">0</span>)
                     <span id="cart-badge" class="hidden absolute -top-2 -right-2 bg-red-500 text-xs text-white rounded-full h-5 w-5 flex items-center justify-center">
-                        <!-- Cart count will be inserted here by JavaScript -->
-                    </span>
+                        </span>
                 </button>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content Area - Conditional Rendering -->
     <div id="products-view">
-        <!-- Hero Section -->
         <section class="relative h-screen flex items-center justify-center text-center p-4 md:p-8 overflow-hidden">
             <div class="absolute inset-0 bg-[url('https://placehold.co/0f172a/67e8f9')] bg-cover bg-center opacity-20"></div>
             <div class="relative z-10 max-w-4xl">
@@ -131,7 +118,6 @@
             </div>
         </section>
 
-        <!-- Products Section -->
         <section class="py-16 px-4 md:px-8">
             <div class="container mx-auto">
                 <h3 class="text-4xl font-extrabold text-center mb-12 text-white">
@@ -140,13 +126,11 @@
                     </span>
                 </h3>
                 <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Product cards will be dynamically inserted here by JavaScript -->
-                </div>
+                    </div>
             </div>
         </section>
     </div>
 
-    <!-- Checkout Page -->
     <div id="checkout-view" class="hidden py-16 px-4 md:px-8 min-h-[calc(100vh-150px)] flex items-center justify-center">
         <div class="bg-gray-800 p-8 rounded-3xl shadow-2xl max-w-2xl w-full text-center border border-gray-700">
             <h3 class="text-4xl font-extrabold text-white mb-8">
@@ -155,15 +139,12 @@
                 </span>
             </h3>
 
-            <!-- Payment Status: Pending -->
             <div id="checkout-pending-state">
                 <div id="cart-items-display" class="mb-8 max-h-60 overflow-y-auto pr-4">
-                    <!-- Cart items will be dynamically inserted here -->
-                </div>
+                    </div>
                 <p id="total-amount-display" class="text-gray-300 text-xl font-bold mb-8">
                     Total Amount: <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400 font-extrabold">
-                        <!-- Total amount will be inserted here -->
-                    </span>
+                        </span>
                 </p>
                 <button id="proceed-to-payment-btn" class="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75">
                     Confirm & Pay Now
@@ -171,14 +152,12 @@
                 <div id="empty-cart-message" class="text-gray-400 text-lg mb-8 hidden">Your cart is empty. Add some phones!</div>
             </div>
 
-            <!-- Payment Status: Processing -->
             <div id="checkout-processing-state" class="hidden flex flex-col items-center">
                 <div class="text-blue-400 text-6xl mb-6 animate-spin-slow">⚙️</div>
                 <h4 class="text-3xl font-bold text-white mb-4">Processing Payment...</h4>
                 <p id="processing-message" class="text-gray-300 text-lg"></p>
             </div>
 
-            <!-- Payment Status: Success -->
             <div id="checkout-success-state" class="hidden flex flex-col items-center">
                 <div class="text-green-400 text-6xl mb-6 animate-pop-in">✔</div>
                 <h4 class="text-3xl font-bold text-white mb-4">Payment Successful!</h4>
@@ -190,7 +169,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="py-8 px-4 md:px-8 bg-gray-950 border-t border-gray-800 text-center text-gray-500 text-sm">
         <div class="container mx-auto">
             <p>&copy; <span id="current-year"></span> ByteGenics. All rights reserved.</p>
@@ -205,7 +183,7 @@
         // --- Global State Variables ---
         let cart = [];
         let currentView = 'products'; // 'products' or 'checkout'
-        let showCartMessage = false;
+        let showCartMessage = false; // This variable seems unused, can be removed.
         let message = '';
         let paymentStatus = 'pending'; // 'pending', 'processing', 'success', 'failed'
 
@@ -218,6 +196,9 @@
             { id: 5, name: 'Realme GT 6 Pro', description: 'Gaming powerhouse with a vibrant AMOLED display and flagship processor.', price: 45000.00, imageUrl: 'realme.jfif' },
             { id: 6, name: 'Vivo X100 Pro+', description: 'Master mobile photography with advanced Zeiss optics and powerful zoom.', price: 88000.00, imageUrl: 'vivo.jfif' }
         ];
+
+        // Ensure dataLayer is initialized for GTM
+        window.dataLayer = window.dataLayer || [];
 
         // --- DOM Elements ---
         const productGrid = document.getElementById('product-grid');
@@ -306,6 +287,21 @@
                     }
                 });
             });
+
+            // Optional: Track 'view_item_list' for all products displayed on page load
+            // This is a more general list view, not specific item views.
+            // For individual product page views, a dedicated product detail page would be better.
+            window.dataLayer.push({
+                event: 'view_item_list',
+                ecommerce: {
+                    items: products.map(product => ({
+                        item_id: product.id.toString(),
+                        item_name: product.name,
+                        item_category: 'Phone', // Add category if applicable
+                        price: product.price
+                    }))
+                }
+            });
         }
 
         /**
@@ -341,8 +337,8 @@
                     cartItemsDisplay.appendChild(cartItemDiv);
                 });
 
-                const totalAmount = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
-                totalAmountDisplay.querySelector('span').textContent = `₹${totalAmount}`;
+                const totalAmount = cart.reduce((sum, item) => sum + item.price, 0);
+                totalAmountDisplay.querySelector('span').textContent = `₹${totalAmount.toFixed(2)}`;
             }
         }
 
@@ -362,7 +358,7 @@
                 processingMessage.textContent = message;
             } else if (paymentStatus === 'success') {
                 checkoutSuccessState.classList.remove('hidden');
-                successMessage.textContent = message + ' Your order has been placed.';
+                successMessage.textContent = message; // Message is now updated in proceedToPayment
             }
         }
 
@@ -380,6 +376,23 @@
                 checkoutView.classList.remove('hidden');
                 paymentStatus = 'pending'; // Reset payment status when entering checkout
                 updateCheckoutStateDisplay();
+
+                // Push 'begin_checkout' event to dataLayer
+                if (cart.length > 0) { // Only send begin_checkout if cart isn't empty
+                    window.dataLayer.push({
+                        event: 'begin_checkout',
+                        ecommerce: {
+                            items: cart.map(item => ({
+                                item_id: item.id.toString(),
+                                item_name: item.name,
+                                price: item.price,
+                                quantity: 1
+                            })),
+                            value: cart.reduce((sum, item) => sum + item.price, 0),
+                            currency: 'INR' // Assuming INR, change if different
+                        }
+                    });
+                }
             }
             window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on view change
         }
@@ -387,13 +400,30 @@
         // --- Core Logic Functions ---
 
         /**
-         * Adds a product to the cart and navigates to the checkout page.
+         * Adds a product to the cart and dispatches dataLayer events.
          * @param {Object} product - The product object to add.
          */
         function addToCart(product) {
-            cart.push(product); // Add product to cart
+            // Check if product is already in cart, if so, just update quantity (for simplicity, we'll just add another item for now)
+            // For a robust cart, you'd manage quantities of existing items.
+            cart.push(product);
             displayTemporaryMessage(`${product.name} added to cart!`);
             updateCartCount();
+
+            // Push 'add_to_cart' event to dataLayer
+            window.dataLayer.push({
+                event: 'add_to_cart',
+                ecommerce: {
+                    items: [{
+                        item_id: product.id.toString(),
+                        item_name: product.name,
+                        price: product.price,
+                        quantity: 1
+                    }],
+                    value: product.price, // Value for single item added
+                    currency: 'INR' // Assuming INR, change if different
+                }
+            });
 
             setTimeout(() => {
                 navigateTo('checkout'); // Navigate to the checkout view after a short delay
@@ -401,17 +431,47 @@
         }
 
         /**
-         * Simulates the payment processing.
+         * Simulates the payment processing and dispatches dataLayer events.
          */
         function proceedToPayment() {
+            if (cart.length === 0) {
+                displayTemporaryMessage("Your cart is empty. Cannot proceed to payment.");
+                return;
+            }
+
             message = 'Processing payment...';
             paymentStatus = 'processing';
             updateCheckoutStateDisplay();
 
             setTimeout(() => {
-                message = 'Payment successful! 🎉';
+                message = 'Payment successful! 🎉 Your order has been placed.';
                 paymentStatus = 'success';
                 updateCheckoutStateDisplay();
+
+                // Generate a unique transaction ID
+                const transactionId = 'T_' + Date.now() + '_' + Math.floor(Math.random() * 1000);
+                const totalAmount = cart.reduce((sum, item) => sum + item.price, 0);
+
+                // Push 'purchase' event to dataLayer
+                window.dataLayer.push({
+                    event: 'purchase',
+                    ecommerce: {
+                        transaction_id: transactionId,
+                        value: totalAmount,
+                        currency: 'INR', // Or your relevant currency
+                        items: cart.map(item => ({
+                            item_id: item.id.toString(),
+                            item_name: item.name,
+                            price: item.price,
+                            quantity: 1
+                        }))
+                    }
+                });
+
+                // Clear the cart after successful purchase
+                cart = [];
+                updateCartCount();
+
             }, 3000); // Simulate 3 seconds payment processing
         }
 
