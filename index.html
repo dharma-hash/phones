@@ -252,6 +252,17 @@
             products.forEach(product => {
                 const productCard = document.createElement('div');
                 productCard.className = 'bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 relative';
+                
+                // Determine button label based on product name
+                let buttonLabel = 'Add to Cart';
+                const lowerName = product.name.toLowerCase();
+                if (lowerName.includes('iphone')) buttonLabel = 'Buy iPhone';
+                else if (lowerName.includes('samsung')) buttonLabel = 'Buy Samsung';
+                else if (lowerName.includes('oneplus') || lowerName.includes('one plus')) buttonLabel = 'Buy One Plus';
+                else if (lowerName.includes('nothing')) buttonLabel = 'Buy Nothing';
+                else if (lowerName.includes('realme')) buttonLabel = 'Buy Realme';
+                else if (lowerName.includes('vivo')) buttonLabel = 'Buy Vivo';
+
                 productCard.innerHTML = `
                     <div class="relative overflow-hidden rounded-t-3xl h-64">
                         <img src="${product.imageUrl}" alt="${product.name}" class="product-image transition-transform duration-300 hover:scale-110" />
@@ -268,7 +279,7 @@
                                 ₹${product.price.toFixed(2)}
                             </span>
                             <button class="add-to-cart-btn bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75 group w-full" data-product-id="${product.id}">
-                                Add to Cart
+                                ${buttonLabel}
                                 <span class="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
                             </button>
                         </div>
@@ -277,7 +288,7 @@
                 productGrid.appendChild(productCard);
             });
 
-            // Attach event listeners to new "Add to Cart" buttons
+            // Attach event listeners to new buttons
             document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                 button.addEventListener('click', (event) => {
                     const productId = parseInt(event.currentTarget.dataset.productId);
