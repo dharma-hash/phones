@@ -1,402 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WD64F44L');</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByteGenics - Next-Gen Phones</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        /* Custom CSS for animations and font */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .animate-fade-in-down {
-            animation: fadeInDown 0.8s ease-out forwards;
-        }
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        .animate-bounce {
-            animation: bounce 0.6s infinite alternate;
-        }
-        .animate-spin-slow {
-            animation: spin 3s linear infinite;
-        }
-        .animate-pop-in {
-            animation: popIn 0.5s ease-out forwards;
-        }
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WD64F44L');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteGenics - Next-Gen Phones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS for animations and font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .animate-fade-in-down {
+            animation: fadeInDown 0.8s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .animate-bounce {
+            animation: bounce 0.6s infinite alternate;
+        }
+        .animate-spin-slow {
+            animation: spin 3s linear infinite;
+        }
+        .animate-pop-in {
+            animation: popIn 0.5s ease-out forwards;
+        }
 
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(-50%); }
-            50% { transform: translateY(0); }
-        }
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        @keyframes popIn {
-            0% { transform: scale(0.5); opacity: 0; }
-            80% { transform: scale(1.1); opacity: 1; }
-            100% { transform: scale(1); }
-        }
-        /* Ensure responsive product images */
-        .product-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        /* Hide scrollbar for a cleaner look while keeping it functional */
-        .overflow-y-auto::-webkit-scrollbar {
-            display: none;
-        }
-        .overflow-y-auto {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-    </style>
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(-50%); }
+            50% { transform: translateY(0); }
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            80% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        /* Ensure responsive product images */
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Hide scrollbar for a cleaner look while keeping it functional */
+        .overflow-y-auto::-webkit-scrollbar {
+            display: none;
+        }
+        .overflow-y-auto {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-gray-900 to-black text-gray-100 font-inter">
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD64F44L"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <div id="cart-message" class="hidden fixed top-4 left-1/2 -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg z-50 animate-bounce">
-        </div>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD64F44L"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div id="cart-message" class="hidden fixed top-4 left-1/2 -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg z-50 animate-bounce">
+        </div>
 
-    <header class="py-6 px-4 md:px-8 border-b border-gray-700 backdrop-blur-md bg-opacity-30 sticky top-0 z-40">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 id="brand-logo" class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:scale-105 transition-transform duration-300 cursor-pointer">
-                ByteGenics
-            </h1>
-            <nav class="space-x-6">
-                <a href="#" id="nav-products" class="text-gray-300 hover:text-purple-400 transition-colors duration-200">
-                    Products
-                </a>
-                <a href="#" class="text-gray-300 hover:text-pink-600 transition-colors duration-200">
-                    About
-                </a>
-                <a href="#" class="text-gray-300 hover:text-teal-400 transition-colors duration-200">
-                    Contact
-                </a>
-                <button id="nav-cart" class="relative text-gray-300 hover:text-blue-400 transition-colors duration-200">
-                    Cart (<span id="cart-count">0</span>)
-                    <span id="cart-badge" class="hidden absolute -top-2 -right-2 bg-red-500 text-xs text-white rounded-full h-5 w-5 flex items-center justify-center">
-                        </span>
-                </button>
-            </nav>
-        </div>
-    </header>
+    <header class="py-6 px-4 md:px-8 border-b border-gray-700 backdrop-blur-md bg-opacity-30 sticky top-0 z-40">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 id="brand-logo" class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:scale-105 transition-transform duration-300 cursor-pointer">
+                ByteGenics
+            </h1>
+            <nav class="space-x-6">
+                <a href="#" id="nav-products" class="text-gray-300 hover:text-purple-400 transition-colors duration-200">
+                    Products
+                </a>
+                <a href="#" class="text-gray-300 hover:text-pink-600 transition-colors duration-200">
+                    About
+                </a>
+                <a href="#" class="text-gray-300 hover:text-teal-400 transition-colors duration-200">
+                    Contact
+                </a>
+                <button id="nav-cart" class="relative text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                    Cart (<span id="cart-count">0</span>)
+                    <span id="cart-badge" class="hidden absolute -top-2 -right-2 bg-red-500 text-xs text-white rounded-full h-5 w-5 flex items-center justify-center">
+                        </span>
+                </button>
+            </nav>
+        </div>
+    </header>
 
-    <div id="products-view">
-        <section class="relative h-screen flex items-center justify-center text-center p-4 md:p-8 overflow-hidden">
-            <div class="absolute inset-0 bg-[url('https://placehold.co/0f172a/67e8f9')] bg-cover bg-center opacity-20"></div>
-            <div class="relative z-10 max-w-4xl">
-                <h2 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg animate-fade-in-down">
-                    Unleash Your Future.
-                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                        The Next-Gen Phones Are Here.
-                    </span>
-                </h2>
-                <p class="text-lg md:text-xl text-gray-300 mb-10 animate-fade-in-up">
-                    Cutting-edge tech, sleek designs, and experiences crafted for the digital native.
-                </p>
-                <button class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out group" onclick="window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })">
-                    <span class="inline-block group-hover:rotate-6 transition-transform duration-300">⚡</span> Explore Devices
-                </button>
-            </div>
-        </section>
+    <div id="products-view">
+        <section class="relative h-screen flex items-center justify-center text-center p-4 md:p-8 overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://placehold.co/0f172a/67e8f9')] bg-cover bg-center opacity-20"></div>
+            <div class="relative z-10 max-w-4xl">
+                <h2 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg animate-fade-in-down">
+                    Unleash Your Future.
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                        The Next-Gen Phones Are Here.
+                    </span>
+                </h2>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 animate-fade-in-up">
+                    Cutting-edge tech, sleek designs, and experiences crafted for the digital native.
+                </p>
+                <button class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out group" onclick="window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })">
+                    <span class="inline-block group-hover:rotate-6 transition-transform duration-300">⚡</span> Explore Devices
+                </button>
+            </div>
+        </section>
 
-        <section class="py-16 px-4 md:px-8">
-            <div class="container mx-auto">
-                <h3 class="text-4xl font-extrabold text-center mb-12 text-white">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">
-                        Our Latest Drops
-                    </span>
-                </h3>
-                <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                    </div>
-            </div>
-        </section>
-    </div>
+        <section class="py-16 px-4 md:px-8">
+            <div class="container mx-auto">
+                <h3 class="text-4xl font-extrabold text-center mb-12 text-white">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">
+                        Our Latest Drops
+                    </span>
+                </h3>
+                <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    </div>
+            </div>
+        </section>
+    </div>
 
-    <div id="checkout-view" class="hidden py-16 px-4 md:px-8 min-h-[calc(100vh-150px)] flex items-center justify-center">
-        <div class="bg-gray-800 p-8 rounded-3xl shadow-2xl max-w-2xl w-full text-center border border-gray-700">
-            <h3 class="text-4xl font-extrabold text-white mb-8">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">
-                    Your Cart & Checkout
-                </span>
-            </h3>
+    <div id="checkout-view" class="hidden py-16 px-4 md:px-8 min-h-[calc(100vh-150px)] flex items-center justify-center">
+        <div class="bg-gray-800 p-8 rounded-3xl shadow-2xl max-w-2xl w-full text-center border border-gray-700">
+            <h3 class="text-4xl font-extrabold text-white mb-8">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">
+                    Your Cart & Checkout
+                </span>
+            </h3>
 
-            <div id="checkout-pending-state">
-                <div id="cart-items-display" class="mb-8 max-h-60 overflow-y-auto pr-4">
-                                    </div>
-                <p id="total-amount-display" class="text-gray-300 text-xl font-bold mb-8">
-                    Total Amount: <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400 font-extrabold">
-                        </span>
-                </p>
-                <button id="proceed-to-payment-btn" class="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75">
-                    Confirm & Pay Now
-                </button>
-                <div id="empty-cart-message" class="text-gray-400 text-lg mb-8 hidden">Your cart is empty. Add some phones!</div>
-            </div>
+            <div id="checkout-pending-state">
+                <div id="cart-items-display" class="mb-8 max-h-60 overflow-y-auto pr-4">
+                    </div>
+                <p id="total-amount-display" class="text-gray-300 text-xl font-bold mb-8">
+                    Total Amount: <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400 font-extrabold">
+                        </span>
+                </p>
+                <button id="proceed-to-payment-btn" class="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75">
+                    Confirm & Pay Now
+                </button>
+                <div id="empty-cart-message" class="text-gray-400 text-lg mb-8 hidden">Your cart is empty. Add some phones!</div>
+            </div>
 
-            <div id="checkout-processing-state" class="hidden flex flex-col items-center">
-                <div class="text-blue-400 text-6xl mb-6 animate-spin-slow">⚙️</div>
-                <h4 class="text-3xl font-bold text-white mb-4">Processing Payment...</h4>
-                <p id="processing-message" class="text-gray-300 text-lg"></p>
-            </div>
+            <div id="checkout-processing-state" class="hidden flex flex-col items-center">
+                <div class="text-blue-400 text-6xl mb-6 animate-spin-slow">⚙️</div>
+                <h4 class="text-3xl font-bold text-white mb-4">Processing Payment...</h4>
+                <p id="processing-message" class="text-gray-300 text-lg"></p>
+            </div>
 
-            <div id="checkout-success-state" class="hidden flex flex-col items-center">
-                <div class="text-green-400 text-6xl mb-6 animate-pop-in">✔</div>
-                <h4 class="text-3xl font-bold text-white mb-4">Payment Successful!</h4>
-                <p id="success-message" class="text-gray-300 mb-8 text-lg">Your order has been placed.</p>
-                <button id="go-to-home-btn" class="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                    Go back to Home Page
-                </button>
-            </div>
-        </div>
-    </div>
+            <div id="checkout-success-state" class="hidden flex flex-col items-center">
+                <div class="text-green-400 text-6xl mb-6 animate-pop-in">✔</div>
+                <h4 class="text-3xl font-bold text-white mb-4">Payment Successful!</h4>
+                <p id="success-message" class="text-gray-300 mb-8 text-lg">Your order has been placed.</p>
+                <button id="go-to-home-btn" class="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    Go back to Home Page
+                </button>
+            </div>
+        </div>
+    </div>
 
-    <footer class="py-8 px-4 md:px-8 bg-gray-950 border-t border-gray-800 text-center text-gray-500 text-sm">
-        <div class="container mx-auto">
-            <p>&copy; <span id="current-year"></span> ByteGenics. All rights reserved.</p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Privacy Policy</a>
-                <a href="#" class="hover:text-pink-400 transition-colors duration-200">Terms of Service</a>
-            </div>
-        </div>
-    </footer>
+    <footer class="py-8 px-4 md:px-8 bg-gray-950 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <div class="container mx-auto">
+            <p>&copy; <span id="current-year"></span> ByteGenics. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-pink-400 transition-colors duration-200">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
 
-    <script>
-        // --- Global State Variables ---
-        let cart = [];
-        let currentView = 'products'; // 'products' or 'checkout'
-        let showCartMessage = false; // This variable seems unused, can be removed.
-        let message = '';
-        let paymentStatus = 'pending'; // 'pending', 'processing', 'success', 'failed'
+    <script>
+        // --- Global State Variables ---
+        let cart = [];
+        let currentView = 'products'; // 'products' or 'checkout'
+        let showCartMessage = false; // This variable seems unused, can be removed.
+        let message = '';
+        let paymentStatus = 'pending'; // 'pending', 'processing', 'success', 'failed'
 
-        // Mock product data for phones
-        const products = [
-            { id: 1, name: 'iPhone 16 Pro Max', description: 'The pinnacle of mobile technology with unmatched performance and camera.', price: 155000.00, imageUrl: 'iphone.jfif', buttonText: 'Buy iPhone Now' },
-            { id: 2, name: 'Samsung Galaxy S25 Ultra', description: 'Capture incredible detail with the pro-grade camera and dynamic display.', price: 130000.00, imageUrl: 'Samsung.png', buttonText: 'Get Samsung Device' },
-            { id: 3, name: 'OnePlus 13 Pro', description: 'Fastest charging, smoothest experience, and a stunning fluid display.', price: 95000.00, imageUrl: 'one plus.jfif', buttonText: 'Add OnePlus to Cart' },
-            { id: 4, name: 'Nothing Phone (3)', description: 'Unique Glyph Interface, transparent design, and pure Android experience.', price: 58000.00, imageUrl: 'nothing.jfif', buttonText: 'Purchase Nothing Phone' },
-            { id: 5, name: 'Realme GT 6 Pro', description: 'Gaming powerhouse with a vibrant AMOLED display and flagship processor.', price: 45000.00, imageUrl: 'realme.jfif', buttonText: 'Order Realme' },
-            { id: 6, name: 'Vivo X100 Pro+', description: 'Master mobile photography with advanced Zeiss optics and powerful zoom.', price: 88000.00, imageUrl: 'vivo.jfif', buttonText: 'Add Vivo to Basket' }
-        ];
+        // Mock product data for phones
+        const products = [
+            { id: 1, name: 'iPhone 16 Pro Max', description: 'The pinnacle of mobile technology with unmatched performance and camera.', price: 155000.00, imageUrl: 'iphone.jfif' },
+            { id: 2, name: 'Samsung Galaxy S25 Ultra', description: 'Capture incredible detail with the pro-grade camera and dynamic display.', price: 130000.00, imageUrl: 'Samsung.png' },
+            { id: 3, name: 'OnePlus 13 Pro', description: 'Fastest charging, smoothest experience, and a stunning fluid display.', price: 95000.00, imageUrl: 'one plus.jfif' },
+            { id: 4, name: 'Nothing Phone (3)', description: 'Unique Glyph Interface, transparent design, and pure Android experience.', price: 58000.00, imageUrl: 'nothing.jfif' },
+            { id: 5, name: 'Realme GT 6 Pro', description: 'Gaming powerhouse with a vibrant AMOLED display and flagship processor.', price: 45000.00, imageUrl: 'realme.jfif' },
+            { id: 6, name: 'Vivo X100 Pro+', description: 'Master mobile photography with advanced Zeiss optics and powerful zoom.', price: 88000.00, imageUrl: 'vivo.jfif' }
+        ];
 
-        // Ensure dataLayer is initialized for GTM
-        window.dataLayer = window.dataLayer || [];
+        // Ensure dataLayer is initialized for GTM
+        window.dataLayer = window.dataLayer || [];
 
-        // --- DOM Elements ---
-        const productGrid = document.getElementById('product-grid');
-        const productsView = document.getElementById('products-view');
-        const checkoutView = document.getElementById('checkout-view');
-        const cartMessageDiv = document.getElementById('cart-message');
-        const cartCountSpan = document.getElementById('cart-count');
-        const cartBadgeSpan = document.getElementById('cart-badge');
-        const cartItemsDisplay = document.getElementById('cart-items-display');
-        const totalAmountDisplay = document.getElementById('total-amount-display');
-        const checkoutPendingState = document.getElementById('checkout-pending-state');
-        const checkoutProcessingState = document.getElementById('checkout-processing-state');
-        const checkoutSuccessState = document.getElementById('checkout-success-state');
-        const processingMessage = document.getElementById('processing-message');
-        const successMessage = document.getElementById('success-message');
-        const emptyCartMessage = document.getElementById('empty-cart-message');
+        // --- DOM Elements ---
+        const productGrid = document.getElementById('product-grid');
+        const productsView = document.getElementById('products-view');
+        const checkoutView = document.getElementById('checkout-view');
+        const cartMessageDiv = document.getElementById('cart-message');
+        const cartCountSpan = document.getElementById('cart-count');
+        const cartBadgeSpan = document.getElementById('cart-badge');
+        const cartItemsDisplay = document.getElementById('cart-items-display');
+        const totalAmountDisplay = document.getElementById('total-amount-display');
+        const checkoutPendingState = document.getElementById('checkout-pending-state');
+        const checkoutProcessingState = document.getElementById('checkout-processing-state');
+        const checkoutSuccessState = document.getElementById('checkout-success-state');
+        const processingMessage = document.getElementById('processing-message');
+        const successMessage = document.getElementById('success-message');
+        const emptyCartMessage = document.getElementById('empty-cart-message');
 
-        // --- Functions to Update UI ---
+        // --- Functions to Update UI ---
 
-        /**
-         * Displays a temporary message at the top of the screen.
-         * @param {string} msg - The message to display.
-         */
-        function displayTemporaryMessage(msg) {
-            cartMessageDiv.textContent = msg;
-            cartMessageDiv.classList.remove('hidden');
-            clearTimeout(window.messageTimeout); // Clear any existing timeout
-            window.messageTimeout = setTimeout(() => {
-                cartMessageDiv.classList.add('hidden');
-            }, 3000);
-        }
+        /**
+         * Displays a temporary message at the top of the screen.
+         * @param {string} msg - The message to display.
+         */
+        function displayTemporaryMessage(msg) {
+            cartMessageDiv.textContent = msg;
+            cartMessageDiv.classList.remove('hidden');
+            clearTimeout(window.messageTimeout); // Clear any existing timeout
+            window.messageTimeout = setTimeout(() => {
+                cartMessageDiv.classList.add('hidden');
+            }, 3000);
+        }
 
-        /**
-         * Updates the cart count in the header.
-         */
-        function updateCartCount() {
-            cartCountSpan.textContent = cart.length;
-            if (cart.length > 0) {
-                cartBadgeSpan.textContent = cart.length;
-                cartBadgeSpan.classList.remove('hidden');
-            } else {
-                cartBadgeSpan.classList.add('hidden');
-            }
-        }
+        /**
+         * Updates the cart count in the header.
+         */
+        function updateCartCount() {
+            cartCountSpan.textContent = cart.length;
+            if (cart.length > 0) {
+                cartBadgeSpan.textContent = cart.length;
+                cartBadgeSpan.classList.remove('hidden');
+            } else {
+                cartBadgeSpan.classList.add('hidden');
+            }
+        }
 
-        /**
-         * Renders all product cards in the product grid.
-         */
-        function renderProducts() {
-            productGrid.innerHTML = ''; // Clear existing products
-            products.forEach(product => {
-                const productCard = document.createElement('div');
-                productCard.className = 'bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 relative';
-                productCard.innerHTML = `
-                    <div class="relative overflow-hidden rounded-t-3xl h-64">
-                        <img src="<span class="math-inline">\{product\.imageUrl\}" alt\="</span>{product.name}" class="product-image transition-transform duration-300 hover:scale-110" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-70"></div>
-                        <div class="absolute top-4 right-4 bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
-                            New
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-2xl font-bold mb-2 text-white"><span class="math-inline">\{product\.name\}</h4\>
-<p class\="text\-gray\-400 text\-sm mb\-4 line\-clamp\-2"\></span>{product.description}</p>
-                        <div>
-                            <span class="block text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400 mb-4">
-                                ₹<span class="math-inline">\{product\.price\.toFixed\(2\)\}
-</span\>
-<button class\="add\-to\-cart\-btn bg\-gradient\-to\-r from\-purple\-600 to\-indigo\-600 hover\:from\-purple\-700 hover\:to\-indigo\-700 text\-white font\-bold py\-2 px\-6 rounded\-full shadow\-lg transform hover\:scale\-105 transition\-all duration\-300 ease\-in\-out focus\:outline\-none focus\:ring\-2 focus\:ring\-purple\-500 focus\:ring\-opacity\-75 group w\-full" data\-product\-id\="</span>{product.id}">
-                                ${product.buttonText}
-                                <span class="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
-                            </button>
-                    </div>
-                `;
-                productGrid.appendChild(productCard);
-            });
+        /**
+         * Renders all product cards in the product grid.
+         */
+        function renderProducts() {
+            productGrid.innerHTML = ''; // Clear existing products
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 relative';
+                productCard.innerHTML = `
+                    <div class="relative overflow-hidden rounded-t-3xl h-64">
+                        <img src="${product.imageUrl}" alt="${product.name}" class="product-image transition-transform duration-300 hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-70"></div>
+                        <div class="absolute top-4 right-4 bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            New
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold mb-2 text-white">${product.name}</h4>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">${product.description}</p>
+                        <div>
+                            <span class="block text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400 mb-4">
+                                ₹${product.price.toFixed(2)}
+                            </span>
+                            <button class="add-to-cart-btn bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75 group w-full" data-product-id="${product.id}">
+                                Add to Cart
+                                <span class="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                productGrid.appendChild(productCard);
+            });
 
-            // Attach event listeners to new "Add to Cart" buttons
-            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-                button.addEventListener('click', (event) => {
-                    const productId = parseInt(event.currentTarget.dataset.productId);
-                    const productToAdd = products.find(p => p.id === productId);
-                    if (productToAdd) {
-                        addToCart(productToAdd);
-                    }
-                });
-            });
+            // Attach event listeners to new "Add to Cart" buttons
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const productId = parseInt(event.currentTarget.dataset.productId);
+                    const productToAdd = products.find(p => p.id === productId);
+                    if (productToAdd) {
+                        addToCart(productToAdd);
+                    }
+                });
+            });
 
-            // Optional: Track 'view_item_list' for all products displayed on page load
-            // This is a more general list view, not specific item views.
-            // For individual product page views, a dedicated product detail page would be better.
-            window.dataLayer.push({
-                event: 'view_item_list',
-                ecommerce: {
-                    items: products.map(product => ({
-                        item_id: product.id.toString(),
-                        item_name: product.name,
-                        item_category: 'Phone', // Add category if applicable
-                        price: product.price
-                    }))
-                }
-            });
-        }
+            // Optional: Track 'view_item_list' for all products displayed on page load
+            // This is a more general list view, not specific item views.
+            // For individual product page views, a dedicated product detail page would be better.
+            window.dataLayer.push({
+                event: 'view_item_list',
+                ecommerce: {
+                    items: products.map(product => ({
+                        item_id: product.id.toString(),
+                        item_name: product.name,
+                        item_category: 'Phone', // Add category if applicable
+                        price: product.price
+                    }))
+                }
+            });
+        }
 
-        /**
-         * Renders the cart items and total amount on the checkout page.
-         */
-        function renderCheckoutCart() {
-            cartItemsDisplay.innerHTML = ''; // Clear existing items
+        /**
+         * Renders the cart items and total amount on the checkout page.
+         */
+        function renderCheckoutCart() {
+            cartItemsDisplay.innerHTML = ''; // Clear existing items
 
-            if (cart.length === 0) {
-                emptyCartMessage.classList.remove('hidden');
-                cartItemsDisplay.classList.add('hidden');
-                totalAmountDisplay.classList.add('hidden');
-                document.getElementById('proceed-to-payment-btn').classList.add('hidden');
-            } else {
-                emptyCartMessage.classList.add('hidden');
-                cartItemsDisplay.classList.remove('hidden');
-                totalAmountDisplay.classList.remove('hidden');
-                document.getElementById('proceed-to-payment-btn').classList.remove('hidden');
+            if (cart.length === 0) {
+                emptyCartMessage.classList.remove('hidden');
+                cartItemsDisplay.classList.add('hidden');
+                totalAmountDisplay.classList.add('hidden');
+                document.getElementById('proceed-to-payment-btn').classList.add('hidden');
+            } else {
+                emptyCartMessage.classList.add('hidden');
+                cartItemsDisplay.classList.remove('hidden');
+                totalAmountDisplay.classList.remove('hidden');
+                document.getElementById('proceed-to-payment-btn').classList.remove('hidden');
 
-                cart.forEach(item => {
-                    const cartItemDiv = document.createElement('div');
-                    cartItemDiv.className = 'flex items-center justify-between bg-gray-900 rounded-lg p-4 mb-3 shadow-md';
-                    cartItemDiv.innerHTML = `
-                        <div class="flex items-center">
-                            <img src="<span class="math-inline">\{item\.imageUrl\}" alt\="</span>{item.name}" class="w-16 h-16 rounded-lg object-cover mr-4" />
-                            <div>
-                                <p class="font-semibold text-white text-lg"><span class="math-inline">\{item\.name\}</p\>
-<p class\="text\-gray\-400"\>₹</span>{item.price.toFixed(2)}</p>
-                            </div>
-                        </div>
-                        <span class="text-lg text-white font-bold">1 pc.</span>
-                    `;
-                    cartItemsDisplay.appendChild(cartItemDiv);
-                });
+                cart.forEach(item => {
+                    const cartItemDiv = document.createElement('div');
+                    cartItemDiv.className = 'flex items-center justify-between bg-gray-900 rounded-lg p-4 mb-3 shadow-md';
+                    cartItemDiv.innerHTML = `
+                        <div class="flex items-center">
+                            <img src="${item.imageUrl}" alt="${item.name}" class="w-16 h-16 rounded-lg object-cover mr-4" />
+                            <div>
+                                <p class="font-semibold text-white text-lg">${item.name}</p>
+                                <p class="text-gray-400">₹${item.price.toFixed(2)}</p>
+                            </div>
+                        </div>
+                        <span class="text-lg text-white font-bold">1 pc.</span>
+                    `;
+                    cartItemsDisplay.appendChild(cartItemDiv);
+                });
 
-                const totalAmount = cart.reduce((sum, item) => sum + item.price, 0);
-                totalAmountDisplay.querySelector('span').textContent = `₹${totalAmount.toFixed(2)}`;
-            }
-        }
+                const totalAmount = cart.reduce((sum, item) => sum + item.price, 0);
+                totalAmountDisplay.querySelector('span').textContent = `₹${totalAmount.toFixed(2)}`;
+            }
+        }
 
-        /**
-         * Updates the display of the checkout page based on payment status.
-         */
-        function updateCheckoutStateDisplay() {
-            checkoutPendingState.classList.add('hidden');
-            checkoutProcessingState.classList.add('hidden');
-            checkoutSuccessState.classList.add('hidden');
+        /**
+         * Updates the display of the checkout page based on payment status.
+         */
+        function updateCheckoutStateDisplay() {
+            checkoutPendingState.classList.add('hidden');
+            checkoutProcessingState.classList.add('hidden');
+            checkoutSuccessState.classList.add('hidden');
 
-            if (paymentStatus === 'pending') {
-                checkoutPendingState.classList.remove('hidden');
-                renderCheckoutCart(); // Ensure cart items are rendered
-            } else if (paymentStatus === 'processing') {
-                checkoutProcessingState.classList.remove('hidden');
-                processingMessage.textContent = message;
-            } else if (paymentStatus === 'success') {
-                checkoutSuccessState.classList.remove('hidden');
-                successMessage.textContent = message; // Message is now updated in proceedToPayment
-            }
-        }
+            if (paymentStatus === 'pending') {
+                checkoutPendingState.classList.remove('hidden');
+                renderCheckoutCart(); // Ensure cart items are rendered
+            } else if (paymentStatus === 'processing') {
+                checkoutProcessingState.classList.remove('hidden');
+                processingMessage.textContent = message;
+            } else if (paymentStatus === 'success') {
+                checkoutSuccessState.classList.remove('hidden');
+                successMessage.textContent = message; // Message is now updated in proceedToPayment
+            }
+        }
 
-        /**
-         * Navigates between 'products' and 'checkout' views.
-         * @param {string} view - The view to switch to ('products' or 'checkout').
-         */
-        function navigateTo(view) {
-            currentView = view;
-            if (currentView === 'products') {
-                productsView.classList.remove('hidden');
-                checkoutView.classList.add('hidden');
-            } else if (currentView === 'checkout') {
-                productsView.classList.add('hidden');
-                checkoutView.classList.remove('hidden');
-                paymentStatus = 'pending'; // Reset payment status when entering checkout
-                updateCheckoutStateDisplay();
+        /**
+         * Navigates between 'products' and 'checkout' views.
+         * @param {string} view - The view to switch to ('products' or 'checkout').
+         */
+        function navigateTo(view) {
+            currentView = view;
+            if (currentView === 'products') {
+                productsView.classList.remove('hidden');
+                checkoutView.classList.add('hidden');
+            } else if (currentView === 'checkout') {
+                productsView.classList.add('hidden');
+                checkoutView.classList.remove('hidden');
+                paymentStatus = 'pending'; // Reset payment status when entering checkout
+                updateCheckoutStateDisplay();
 
-                // Push 'begin_checkout' event to dataLayer
-                if (cart.length > 0) { // Only send begin_checkout if cart isn't empty
-                    window.dataLayer.push({
-                        event: 'begin_checkout',
-                        ecommerce: {
-                            items: cart.map(item => ({
-                                item_id: item.id.toString(),
-                                item_name: item.name,
-                                price: item.price,
-                                quantity: 1
-                            })),
-                            value: cart.reduce((sum, item) => sum + item.price, 0),
-                            currency: 'INR' // Assuming INR, change if different
-                        }
-                    });
-                }
-            }
-            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on view change
-        }
+                // Push 'begin_checkout' event to dataLayer
+                if (cart.length > 0) { // Only send begin_checkout if cart isn't empty
+                    window.dataLayer.push({
+                        event: 'begin_checkout',
+                        ecommerce: {
+                            items: cart.map(item => ({
+                                item_id: item.id.toString(),
+                                item_name: item.name,
+                                price: item.price,
+                                quantity: 1
+                            })),
+                            value: cart.reduce((sum, item) => sum + item.price, 0),
+                            currency: 'INR' // Assuming INR, change if different
+                        }
+                    });
+                }
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on view change
+        }
 
-        // --- Core Logic Functions ---
+        // --- Core Logic Functions ---
 
-        /**
-         * Adds
+        /**
+         * Adds a product to the cart and dispatches dataLayer events.
+         * @param {Object} product - The product object to add.
+         */
+        function addToCart(product) {
+            // Check if product is already in cart, if so, just update quantity (for simplicity, we'll just add another item for now)
+            // For a robust cart, you'd manage quantities of existing items.
+            cart.push(product);
+            displayTemporaryMessage(`${product.name} added to cart!`);
+            updateCartCount();
+
+            // Push 'add_to_cart' event to dataLayer
+            window.dataLayer.push({
+                event: 'add_to_cart',
+                ecommerce: {
+                    items: [{
+                        item_id: product.id.toString(),
+                        item_name: product.name,
+                        price: product.price,
+                        quantity: 1
+                    }],
+                    value: product.price, // Value for single item added
+                    currency: 'INR' // Assuming INR, change if different
+                }
+            });
+
+            setTimeout(() => {
+                navigateTo('checkout'); // Navigate to the checkout view after a short delay
+            }, 1500);
+        }
+
+        /**
+         * Simulates the payment processing and dispatches dataLayer events.
+         */
+        function proceedToPayment() {
+            if (cart.length === 0) {
+                displayTemporaryMessage("Your cart is empty. Cannot proceed to payment.");
+                return;
+            }
+
+            message = 'Processing payment...';
+            paymentStatus = 'processing';
+            updateCheckoutStateDisplay();
+
+            setTimeout(() => {
+                message = 'Payment successful! 🎉 Your order has been placed.';
+                paymentStatus = 'success';
+                updateCheckoutStateDisplay();
+
+                // Generate a unique transaction ID
+                const transactionId = 'T_' + Date.now() + '_' + Math.floor(Math.random() * 1000);
+                const totalAmount = cart.reduce((sum, item) => sum + item.price, 0);
+
+                // Push 'purchase' event to dataLayer
+                window.dataLayer.push({
+                    event: 'purchase',
+                    ecommerce: {
+                        transaction_id: transactionId,
+                        value: totalAmount,
+                        currency: 'INR', // Or your relevant currency
+                        items: cart.map(item => ({
+                            item_id: item.id.toString(),
+                            item_name: item.name,
+                            price: item.price,
+                            quantity: 1
+                        }))
+                    }
+                });
+
+                // Clear the cart after successful purchase
+                cart = [];
+                updateCartCount();
+
+            }, 3000); // Simulate 3 seconds payment processing
+        }
+
+        /**
+         * Resets the cart and navigates back to the home (products) page.
+         */
+        function goToHomePage() {
+            cart = []; // Clear the cart
+            updateCartCount();
+            navigateTo('products'); // Navigate back to products view
+        }
+
+        // --- Event Listeners ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Initial render of products
+            renderProducts();
+            updateCartCount(); // Initialize cart count
+
+            // Navigation links
+            document.getElementById('brand-logo').addEventListener('click', goToHomePage);
+            document.getElementById('nav-products').addEventListener('click', (e) => {
+                e.preventDefault();
+                goToHomePage(); // Re-use goToHomePage to ensure cart is cleared if user navigates back via 'Products'
+            });
+            document.getElementById('nav-cart').addEventListener('click', (e) => {
+                e.preventDefault();
+                navigateTo('checkout');
+            });
+
+            // Checkout page buttons
+            document.getElementById('proceed-to-payment-btn').addEventListener('click', proceedToPayment);
+            document.getElementById('go-to-home-btn').addEventListener('click', goToHomePage);
+        });
+    </script>
+</body>
+</html>
