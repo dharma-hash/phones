@@ -169,6 +169,18 @@
         </div>
     </div>
 
+    <!-- Add this Contact page section just before the closing </body> tag -->
+<div id="contact-view" class="hidden min-h-[calc(100vh-150px)] flex items-center justify-center bg-gray-900">
+    <div class="bg-gray-800 rounded-3xl shadow-2xl p-8 max-w-sm w-full text-center border border-gray-700">
+        <h2 class="text-3xl font-extrabold text-white mb-4">Contact</h2>
+        <p class="text-lg text-gray-300 mb-2">Dharma</p>
+        <p class="text-lg text-blue-400 font-bold">7259339804</p>
+        <button id="go-to-home-from-contact" class="mt-6 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300">
+            Go back to Home Page
+        </button>
+    </div>
+</div>
+
     <footer class="py-8 px-4 md:px-8 bg-gray-950 border-t border-gray-800 text-center text-gray-500 text-sm">
         <div class="container mx-auto">
             <p>&copy; <span id="current-year"></span> ByteGenics. All rights reserved.</p>
@@ -204,6 +216,7 @@
         const productGrid = document.getElementById('product-grid');
         const productsView = document.getElementById('products-view');
         const checkoutView = document.getElementById('checkout-view');
+        const contactView = document.getElementById('contact-view');
         const cartMessageDiv = document.getElementById('cart-message');
         const cartCountSpan = document.getElementById('cart-count');
         const cartBadgeSpan = document.getElementById('cart-badge');
@@ -215,6 +228,7 @@
         const processingMessage = document.getElementById('processing-message');
         const successMessage = document.getElementById('success-message');
         const emptyCartMessage = document.getElementById('empty-cart-message');
+        const goToHomeFromContact = document.getElementById('go-to-home-from-contact');
 
         // --- Functions to Update UI ---
 
@@ -382,9 +396,11 @@
             if (currentView === 'products') {
                 productsView.classList.remove('hidden');
                 checkoutView.classList.add('hidden');
+                contactView.classList.add('hidden');
             } else if (currentView === 'checkout') {
                 productsView.classList.add('hidden');
                 checkoutView.classList.remove('hidden');
+                contactView.classList.add('hidden');
                 paymentStatus = 'pending'; // Reset payment status when entering checkout
                 updateCheckoutStateDisplay();
 
@@ -404,6 +420,10 @@
                         }
                     });
                 }
+            } else if (currentView === 'contact') {
+                productsView.classList.add('hidden');
+                checkoutView.classList.add('hidden');
+                contactView.classList.remove('hidden');
             }
             window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on view change
         }
@@ -518,7 +538,37 @@
             // Checkout page buttons
             document.getElementById('proceed-to-payment-btn').addEventListener('click', proceedToPayment);
             document.getElementById('go-to-home-btn').addEventListener('click', goToHomePage);
+
+            // Contact page navigation
+            const contactNavLink = Array.from(document.querySelectorAll('nav a')).find(a => a.textContent.trim() === 'Contact');
+            if (contactNavLink) {
+                contactNavLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navigateTo('contact');
+                });
+            }
+            goToHomeFromContact.addEventListener('click', goToHomePage);
         });
+
+        // Handle browser navigation for contact page
+        window.addEventListener('popstate', function(event) {
+            if (window.location.pathname.endsWith('/contact')) {
+                contactView.classList.remove('hidden');
+                productsView.classList.add('hidden');
+                checkoutView.classList.add('hidden');
+            } else {
+                contactView.classList.add('hidden');
+                productsView.classList.remove('hidden');
+                checkoutView.classList.add('hidden');
+            }
+        });
+
+        // If user lands directly on /contact, show contact page
+        if (window.location.pathname.endsWith('/contact')) {
+            contactView.classList.remove('hidden');
+            productsView.classList.add('hidden');
+            checkoutView.classList.add('hidden');
+        }
     </script>
 </body>
 </html>
